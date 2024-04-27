@@ -4,14 +4,20 @@ import "./index.css";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 import { Route, RouterProvider, createRoutesFromElements } from "react-router";
-import { createBrowsersRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 
 // Auth
 
 // Restricted
 
-const router = createBrowsersRouter(
-  createRoutesFromElements(<Route path="/" element={<App />}></Route>)
+import Home from "./pages/Home.jsx";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<App />}>
+      <Route index={true} path="/" element={<Home />} />
+    </Route>
+  )
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
