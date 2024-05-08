@@ -74,18 +74,18 @@ import {
     };
   
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 -translate-y-[5rem]">
+      <div className="  -translate-y-[5rem]">
         <>
           <section>
             <div
-              className="relative h-[50rem] w-screen mb-10 flex items-center justify-center bg-cover"
+              className="relative h-[50rem] w-full mb-10 flex items-center justify-center bg-cover"
               style={{ backgroundImage: `url(${banner})` }}
             >
               <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-black opacity-60"></div>
   
               <div className="relative z-10 text-center text-white mt-[10rem]">
-                <h1 className="text-8xl font-bold mb-4">The Movies Hub</h1>
-                <p className="text-2xl">
+                <h1 className="lg:text-8xl text-xl font-bold mb-4">The Movies Hub</h1>
+                <p className="lg:text-2xl text-xl ">
                   Cinematic Odyssey: Unveiling the Magic of Movies
                 </p>
               </div>
@@ -98,7 +98,7 @@ import {
                   value={moviesFilter.searchTerm}
                   onChange={handleSearchChange}
                 />
-                <section className="sorts-container mt-[2rem] ml-[10rem]  w-[30rem]">
+                <section className="sorts-container mt-[2rem] lg:ml-[10rem] flex lg:flex-row flex-col gap-4  lg:w-[30rem] w-full">
                   <select
                     className="border p-2 rounded text-black"
                     value={moviesFilter.selectedGenre}
@@ -113,7 +113,7 @@ import {
                   </select>
   
                   <select
-                    className="border p-2 rounded ml-4 text-black"
+                    className="border p-2 rounded  text-black"
                     value={moviesFilter.selectedYear}
                     onChange={(e) => handleYearChange(e.target.value)}
                   >
@@ -126,7 +126,7 @@ import {
                   </select>
   
                   <select
-                    className="border p-2 rounded ml-4 text-black"
+                    className="border p-2 rounded text-black"
                     value={moviesFilter.selectedSort}
                     onChange={(e) => handleSortChange(e.target.value)}
                   >
@@ -139,7 +139,7 @@ import {
               </section>
             </div>
   
-            <section className="mt-[10rem] w-screen flex justify-center items-center flex-wrap">
+            <section className="mt-[10rem] w-full flex justify-center items-center flex-wrap">
               {filteredMovies?.map((movie) => (
                 <MovieCard key={movie._id} movie={movie} />
               ))}

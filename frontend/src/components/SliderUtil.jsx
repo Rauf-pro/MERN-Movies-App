@@ -10,6 +10,7 @@ const SliderUtil = ({data}) => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 2,
+        
       };
   return (
     <Slider {...settings}>

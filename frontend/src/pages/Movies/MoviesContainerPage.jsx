@@ -40,18 +40,18 @@ const MoviesContainerPage = () => {
         ))}
       </nav>
 
-      <section className="flex flex-col justify-center items-center w-full lg:w-auto">
-        <div className="w-full lg:w-[100rem] mb-8 ">
+      <section className="flex flex-col justify-center items-center w-full lg:w-auto ">
+        <div className="w-full lg:w-[90rem] mb-8 ">
           <h1 className="mb-5">Choose For You</h1>
           <SliderUtil data={randomMovies} />
         </div>
 
-        <div className="w-full lg:w-[100rem] mb-8">
+        <div className="w-full lg:w-[90rem] mb-8">
           <h1 className="mb-5">Top Movies</h1>
           <SliderUtil data={topMovies} />
         </div>
 
-        <div className="w-full lg:w-[100rem] mb-8">
+        <div className="w-full lg:w-[90rem] mb-8">
           <h1 className="mb-5">Choose Movie</h1>
           <SliderUtil data={filteredMovies} />
         </div>
