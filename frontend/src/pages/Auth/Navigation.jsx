@@ -20,6 +20,10 @@ const Navigation = () => {
     setDropdownOpen(!dropdownOpen);
   };
 
+  const closeDropdown = () => {
+    setDropdownOpen(false);
+  }
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -100,6 +104,7 @@ const Navigation = () => {
                     <Link
                       to="/admin/movies/dashboard"
                       className="block px-4 py-2 hover:bg-gray-100"
+                      onClick={closeDropdown}
                     >
                       Dashboard
                     </Link>
@@ -111,6 +116,7 @@ const Navigation = () => {
                 <Link
                   to="/profile"
                   className="block px-4 py-2 hover:bg-gray-100"
+                  onClick={closeDropdown}
                 >
                   Profile
                 </Link>

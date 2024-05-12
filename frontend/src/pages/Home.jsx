@@ -1,16 +1,18 @@
-import Header from "./Movies/Header"
-import MoviesContainerPage from "./Movies/MoviesContainerPage"
+import Header from "./Movies/Header";
+import MoviesContainerPage from "./Movies/MoviesContainerPage";
 
 const Home = () => {
   return (
     <>
-      <Header/>
+      <div className="container mx-auto">
+        <Header />
 
-      <section className="mt-[10rem]">
-        <MoviesContainerPage />
-      </section>
+        <section className="mt-[10rem]">
+          <MoviesContainerPage />
+        </section>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

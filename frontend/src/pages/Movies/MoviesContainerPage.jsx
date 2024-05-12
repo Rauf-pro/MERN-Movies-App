@@ -25,8 +25,8 @@ const MoviesContainerPage = () => {
   );
 
   return (
-    <div className="flex flex-col lg:flex-row lg:justify-between items-center">
-      <nav className=" ml-[4rem] flex flex-row xl:flex-col lg:flex-col md:flex-row sm:flex-row">
+    <div className="flex flex-col lg:flex-row xl:justify-between lg:gap-[2.5rem] items-center">
+      <nav className="flex flex-row lg:flex-col md:flex-row sm:flex-row">
         {genres?.map((g) => (
           <button
             key={g._id}
@@ -40,21 +40,21 @@ const MoviesContainerPage = () => {
         ))}
       </nav>
 
-      <section className="flex flex-col justify-center items-center w-full lg:w-auto ">
-        <div className="w-full lg:w-[90rem] mb-8 ">
-          <h1 className="mb-5">Choose For You</h1>
+      <section className="flex flex-col justify-center items-center lg:w-auto w-full  ">
+         <div className="w-full xl:w-[70rem] mb-8 ">
+          <h1 className="mb-5 ml-[2rem] lg:ml-0">Choose For You</h1>
           <SliderUtil data={randomMovies} />
         </div>
 
-        <div className="w-full lg:w-[90rem] mb-8">
-          <h1 className="mb-5">Top Movies</h1>
+        <div className="w-full xl:w-[70rem] mb-8">
+          <h1 className="mb-5 ml-[2rem] lg:ml-0">Top Movies</h1>
           <SliderUtil data={topMovies} />
         </div>
 
-        <div className="w-full lg:w-[90rem] mb-8">
-          <h1 className="mb-5">Choose Movie</h1>
+        <div className="w-full xl:w-[70rem] mb-8">
+          <h1 className="mb-5 ml-[2rem] lg:ml-0">Choose Movie</h1>
           <SliderUtil data={filteredMovies} />
-        </div>
+        </div> 
       </section>
     </div>
   );

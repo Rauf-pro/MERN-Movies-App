@@ -74,7 +74,7 @@ import {
     };
   
     return (
-      <div className="  -translate-y-[5rem]">
+      <div className="-translate-y-[5rem]">
         <>
           <section>
             <div

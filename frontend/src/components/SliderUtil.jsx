@@ -10,7 +10,29 @@ const SliderUtil = ({data}) => {
         speed: 500,
         slidesToShow: 4,
         slidesToScroll: 2,
-        
+        responsive: [
+          {
+              breakpoint: 1024, // Medium devices (tablets, less than desktop)
+              settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 2
+              }
+          },
+          {
+              breakpoint: 768, // Small devices (landscape phones)
+              settings: {
+                  slidesToShow: 2,
+                  slidesToScroll: 1
+              }
+          },
+          {
+              breakpoint: 480, // Extra small devices (portrait phones)
+              settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+              }
+          }
+      ]
       };
   return (
     <Slider {...settings}>
