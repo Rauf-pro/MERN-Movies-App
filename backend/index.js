@@ -30,7 +30,7 @@ app.use(cookieParser());
 const PORT = process.env.PORT || 3000;
 
 // CORS
-const cors = require("cors");
+import cors from "cors";
 app.use(cors());
 // Allow specific origin(s)
 app.use(cors({
