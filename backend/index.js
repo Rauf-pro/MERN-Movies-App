@@ -34,7 +34,7 @@ const cors = require("cors");
 app.use(cors());
 // Allow specific origin(s)
 app.use(cors({
-  origin: 'https://mern-movies-app-taupe.vercel.app/'
+  origin: 'https://mern-movies-app-beta.vercel.app/'
 }));
 
 //Routes
