@@ -29,6 +29,14 @@ app.use(cookieParser());
 
 const PORT = process.env.PORT || 3000;
 
+// CORS
+const cors = require("cors");
+app.use(cors());
+// Allow specific origin(s)
+app.use(cors({
+  origin: 'https://yourdeployedsite.com'
+}));
+
 //Routes
 
 app.use("/api/v1/users", userRoutes);
